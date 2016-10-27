@@ -1,12 +1,18 @@
 WhatToDo - Project
 
 Step by step:
+
 1. Install "nodejs": https://nodejs.org/en/
+
     Check it in Command-Line: node -v and npm -v
-2. Create project "whattodo-redux" with commands: 
+
+2. Create project "whattodo-redux" with commands:
+
     cd ../whattodo-redux 
     npm init -y
+
 3. Install "webpack":
+
     npm install --save-dev webpack webpack-dev-server html-webpack-plugin
     Then, we need to add it into package.jsson:
         ...
@@ -15,11 +21,15 @@ Step by step:
             "build": "webpack --progress --colors --config ./webpack.config.js"
         },
         ...
+
 4. Create id="app" which is the root that React Component will render
+
 5. Build project:
     npm run build
+
 6. Start project:
     npm start
+
 7. Install "Hot Reloading": Apply changes in source code to web browser immediately.
     npm install --save-dev react-hot-loader
     module.exports = {
@@ -34,6 +44,7 @@ Step by step:
             hot: true
         }
     };
+
 8. Optional. Install Bable: Its mission is to compile ES6 to ES5 which is supported on almost of browser
     npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react babel-preset-stage-1 babel-preset-stage-2
 
@@ -57,5 +68,6 @@ Step by step:
         },
         ...
     };
+
 9. Install React:
     npm install --save react react-dom
