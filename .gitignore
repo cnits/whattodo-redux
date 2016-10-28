@@ -38,6 +38,6 @@ luac.out
 *.i*86
 *.x86_64
 *.hex
-*./node_modules/*
-*./build/*
+/node_modules/*
+/build/*
 
