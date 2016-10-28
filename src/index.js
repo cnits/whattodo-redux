@@ -1,23 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import TrackList from "./components/TrackList";
-
-
-function getUniqueKey() {
-    return new Date().getTime().toString() + Math.random().toString();
-}
+import * as Utils from "./utils/helper";
+import * as actions from "./actions";
+import configureStore from "./store";
 
 
 const tracks = [{
-    id: getUniqueKey(),
+    id: Utils.helper().getUniqueKey(),
     title: 'Zí dầu tình bậu muốn thôi...'
 }, {
-    id: getUniqueKey(),
+    id: Utils.helper().getUniqueKey(),
     title: 'Bìm bịp kêu chiều...'
 }, {
-    id: getUniqueKey(),
+    id: Utils.helper().getUniqueKey(),
     title: 'Tiếng ễnh ương...'
 }];
+
+const store = configureStore();
+store.dispatch(actions.setTracks(tracks));
 
 ReactDOM.render(
     <TrackList tracks={tracks} />,

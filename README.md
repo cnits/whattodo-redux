@@ -71,3 +71,33 @@ Step by step:
 
 9. Install React:
     npm install --save react react-dom
+
+10. Setup testing with mocha(test framework), chai(library for comparing) and jsdom(access to dom element):
+    npm install --save-dev mocha chai jsdom
+    - Create setup.js file in test folder
+    - Add scripts for testing:
+        ...
+        "scripts": {
+            ...
+            "test": "mocha --compilers js:babel-core/register --require ./test/setup.js 'src/**/*spec.js'"
+        },
+        ...
+    - Additional: Enzyme(A library supports emulating the states in test processing):
+        npm install --save-dev react-addons-test-utils enzyme
+    - How to test:
+        npm test
+    - Bonus: add the following config:
+        ...
+        "scripts": {
+            ...
+            "test:watch": "npm run test -- --watch"
+        },
+        ...
+        to watch fail tests on local while developing
+             npm run test:watch
+
+11. Redux:
+    npm install --save redux redux-logger
+
+12. Connect between React & Redux:
+    npm install --save react-redux
