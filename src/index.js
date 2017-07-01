@@ -1,10 +1,11 @@
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import React from "react";
 import ReactDOM from "react-dom";
 import TrackList from "./components/TrackList";
 import * as Utils from "./utils/helper";
 import * as actions from "./actions";
 import configureStore from "./store";
+import App from "./components/App/App";
 
 
 const tracks = [{
@@ -20,6 +21,10 @@ const tracks = [{
 
 const store = configureStore();
 store.dispatch(actions.setTracks(tracks));
+store.dispatch(actions.ActContact.persist({
+    Name: "Phong Lam",
+    Love: "Nhung Ly"
+}));
 
 /*ReactDOM.render(
     <TrackList tracks={tracks} />,
@@ -27,8 +32,8 @@ store.dispatch(actions.setTracks(tracks));
 );*/
 
 ReactDOM.render(
-  <Provider store={store}>
-    <TrackList/>
-  </Provider>,
-  document.getElementById('app')
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('app')
 );

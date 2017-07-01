@@ -1,5 +1,6 @@
 import { setTracks } from './tracks';
-
+import { ActContact } from "./ContactAct";
 export {
-    setTracks
+    setTracks,
+    ActContact
 };
