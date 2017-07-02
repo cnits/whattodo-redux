@@ -1,6 +1,6 @@
-import { setTracks } from './tracks';
 import { ActContact } from "./ContactAct";
+import { ActApp } from "./AppAct";
 export {
-    setTracks,
+    ActApp,
     ActContact
 };

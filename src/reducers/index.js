@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import tracks from './tracks';
+import AppRdrs from './AppRdrs';
 import ContactRdrs from "./ContactRdrs";
 
 export default combineReducers({
-    tracks,
+    AppRdrs,
     ContactRdrs
 });

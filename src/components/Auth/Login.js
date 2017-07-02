@@ -6,6 +6,10 @@ import {
 } from "react-bootstrap";
 
 export default class Login extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
     render() {
         return (
             <Form style={{ padding: "20%" }} horizontal>
@@ -39,7 +43,10 @@ export default class Login extends React.Component {
 
                 <FormGroup>
                     <Col style={{ textAlign: "right" }} sm={10}>
-                        <Button bsStyle="link">Register</Button>
+                        <Button bsStyle="link" onClick={(e) => {
+                            this.props.onSubmit();
+                        }}
+                        >Register</Button>
                         <Button bsStyle="success" bsSize="small" type="button" onClick={(e) => { console.log(e.target); }}>
                             Sign in
                         </Button>
