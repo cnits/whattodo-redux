@@ -3,7 +3,8 @@ import { bindActionCreators } from 'redux';
 import Auth from "./Auth";
 import * as actions from "./../../actions";
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
+    console.log("Index App", state, ownProps);
     return state;
 }
 
@@ -13,6 +14,9 @@ const mapDispatchToProps = dispatch => {
             //dispatch();
         },
         onSignout: () => {
+
+        },
+        onRegister: () => {
 
         },
         onSwitchSignin: () => {

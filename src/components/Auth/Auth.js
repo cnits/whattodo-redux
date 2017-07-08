@@ -10,10 +10,13 @@ export default class Auth extends React.Component {
             state: props.state || AuthStates.SIGNIN
         };
     }
+    componentWillReceiveProps(nextProps) {
+        this.state.state = nextProps.state;
+    }
     render() {
-        let _comp = (<Login onSubmit={this.props.onSwitchRegister} />);
+        let _comp = (<Login onSwitchRegister={this.props.onSwitchRegister} onSignin={this.props.onSignin} />);
         if (this.state.state === AuthStates.REGISTER) {
-            _comp = (<Register onSubmit={this.props.onSwitchSignin} />);
+            _comp = (<Register onSwitchSignin={this.props.onSwitchSignin} onRegister={this.props.onRegister} />);
         }
         return _comp;
     }

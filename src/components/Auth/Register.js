@@ -33,9 +33,12 @@ export default class Register extends React.Component {
 
                 <FormGroup>
                     <Col style={{ textAlign: "right" }} sm={10}>
-                        <Button bsStyle="link">Login</Button>
-                        <Button bsStyle="success" bsSize="small" type="button" onClick={(e) => { console.log("Register", e.target); }}>
-                            Register
+                        <Button bsStyle="link" onClick={(e) => {
+                            this.props.onSwitchSignin();
+                        }}>Login</Button>
+                        <Button bsStyle="success" bsSize="small" type="button" onClick={(e) => {
+                            this.props.onRegister();
+                        }}>Register
                         </Button>
                     </Col>
                 </FormGroup>

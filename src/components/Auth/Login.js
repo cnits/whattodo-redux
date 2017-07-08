@@ -44,11 +44,12 @@ export default class Login extends React.Component {
                 <FormGroup>
                     <Col style={{ textAlign: "right" }} sm={10}>
                         <Button bsStyle="link" onClick={(e) => {
-                            this.props.onSubmit();
+                            this.props.onSwitchRegister();
                         }}
                         >Register</Button>
-                        <Button bsStyle="success" bsSize="small" type="button" onClick={(e) => { console.log(e.target); }}>
-                            Sign in
+                        <Button bsStyle="success" bsSize="small" type="button" onClick={(e) => {
+                            this.props.onSignin();
+                        }}>Sign in
                         </Button>
                     </Col>
                 </FormGroup>

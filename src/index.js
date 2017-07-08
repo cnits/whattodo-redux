@@ -6,7 +6,6 @@ import configureStore from "./store";
 import App from "./components/App";
 
 const store = configureStore();
-store.dispatch(actions.ActApp.switchRegister());
 
 ReactDOM.render(
     <Provider store={store}>
