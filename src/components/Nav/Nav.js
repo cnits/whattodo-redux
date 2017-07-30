@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropsType from "prop-types";
 import { Nav, Navbar, MenuItem, NavDropdown, NavItem } from "react-bootstrap";
+//import { Link, NavLink } from "react-router-dom";
 
 export default class CNav extends Component {
     static propTypes = {
@@ -11,7 +12,7 @@ export default class CNav extends Component {
     }
     constructor(props) {
         super(props);
-        this.state =  {};
+        this.state = {};
     }
     componentWillDidMount() {
 
@@ -21,21 +22,22 @@ export default class CNav extends Component {
             <Navbar>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="#">WHAT.TO.DO</a>
+                        <a href="/">WHAT.TO.DO</a>
                     </Navbar.Brand>
                 </Navbar.Header>
-                <Nav>
-                    <NavItem eventKey={1} href="#">Link</NavItem>
-                    <NavItem eventKey={2} href="#">Link</NavItem>
-                    <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-                        <MenuItem eventKey={3.1}>Action</MenuItem>
-                        <MenuItem eventKey={3.2}>Another action</MenuItem>
-                        <MenuItem eventKey={3.3}>Something else here</MenuItem>
+                <Nav pullRight>
+                    <NavItem eventKey={1} href="/">Home</NavItem>
+                    <NavItem eventKey={2} href="/news">News</NavItem>
+                    <NavDropdown eventKey={3} title="My Session" id="basic-nav-dropdown">
+                        <MenuItem eventKey={3.1} href="/session/contact">Contact</MenuItem>
+                        <MenuItem eventKey={3.2} href="/session/todo">To-do</MenuItem>
+                        <MenuItem eventKey={3.3} href="/session/portfolio">Portfolio</MenuItem>
                         <MenuItem divider />
-                        <MenuItem eventKey={3.4}>Separated link</MenuItem>
+                        <MenuItem eventKey={3.4} href="/link">Links</MenuItem>
                     </NavDropdown>
+                    <NavItem eventKey={4} href="/login">Login</NavItem>
                 </Nav>
             </Navbar>
-        );
+                );
     }
 }

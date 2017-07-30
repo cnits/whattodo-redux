@@ -1,6 +1,9 @@
 import React from "react";
 import Auth from "./../Auth";
+import CNav from "./../Nav";
 import { AuthStates } from "./../../core/constants";
+
+import { Route, Switch } from "react-router-dom";
 
 export default class App extends React.Component {
     constructor(props) {
@@ -46,7 +49,12 @@ export default class App extends React.Component {
     }*/
     render() {
         return (
-            <Auth state={this.state.authState} />
+            <div>
+                <CNav data={[]} />
+                <Switch>
+                    <Route path='/login' Component={Auth} />
+                </Switch>
+            </div>
         );
     }
 };
