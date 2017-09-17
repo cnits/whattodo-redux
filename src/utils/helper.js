@@ -82,19 +82,16 @@ function decrypt(cipherText, seed, reverse, rangeStrs) {
         let counter = cipherText.length;
         for (let i = strLen - 1; i >= 0; i--) {
             let strPos = rangeStrs.indexOf(cipherText[i]);
-            console.log("Counter truoc=", counter);
             if (counter > 0) {
                 counter--;
                 while (counters[counter] === undefined && counter > 0) {
                     counter--;
-                    console.log("Counter=", counter);
                 }
             }
             let strPosNext = strPos - counters[counter];
             if (strPos >= 0) {
                 while (strPosNext < 0) {
                     strPosNext = rangeStrs.length + strPosNext;
-                    console.log("strPosNext=", strPosNext);
                 }
                 if (strPosNext >= rangeStrs.length - 1) {
                     strPosNext = 0;
@@ -131,3 +128,9 @@ function decrypt(cipherText, seed, reverse, rangeStrs) {
     }
     return plainText;
 }
+
+module.exports = {
+    helper: helper,
+    encrypt: encrypt,
+    decrypt: decrypt
+};
