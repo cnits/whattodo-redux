@@ -52,7 +52,7 @@ export default class App extends React.Component {
             <div>
                 <CNav data={[]} />
                 <Switch>
-                    <Route path='/login' Component={Auth} />
+                    <Route exact path='/login' component={Auth} />
                 </Switch>
             </div>
         );

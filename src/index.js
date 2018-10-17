@@ -23,7 +23,10 @@ const store = configureStore();
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter history={history}>
-            <Route exact path="/" component={App} />
+            <div>
+                <Route exact path="/" component={App} />
+                {/* <Route component={NotFound} /> */}
+            </div>
         </BrowserRouter>
     </Provider>,
     document.getElementById('app')
