@@ -1,4 +1,8 @@
-WhatToDo - Project
+---
+Contributor: Phong Lam
+Guideline for tutorial
+---
+# WhatToDo - Project
 
 Step by step:
 
@@ -101,3 +105,9 @@ Step by step:
 
 12. Connect between React & Redux:
     npm install --save react-redux
+
+13. Utilities
+    npm install --save query-string history prop-types react-bootstrap react-router-dom react-router-redux redux-thunk eslint
+
+14. Firebase
+    npm i firebase@latest

@@ -38,6 +38,6 @@ export default class CNav extends Component {
                     <NavItem eventKey={4} href="/login">Login</NavItem>
                 </Nav>
             </Navbar>
-                );
+        );
     }
 }
