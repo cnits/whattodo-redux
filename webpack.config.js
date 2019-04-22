@@ -2,6 +2,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+    mode: 'production',
     entry: [
         'webpack-dev-server/client?http://localhost:8080',
         'webpack/hot/only-dev-server',
@@ -29,11 +30,10 @@ module.exports = {
         })
     ],
     module: {
-        loaders: [{
-            test: /\.js?$/,
+        rules: [{
+            test: /\.(js|jsx)$/,
             exclude: /node_modules/,
-            //loader: 'react-hot!babel'
-            loader: 'react-hot-loader/webpack!babel'
+            use: ['babel-loader']
         }]
     },
 }

@@ -4,12 +4,6 @@ import { Nav, Navbar, MenuItem, NavDropdown, NavItem } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 
 export default class CNav extends Component {
-    static propTypes = {
-        data: PropsType.array.isRequired
-    }
-    static defaultProps = {
-        data: []
-    }
     constructor(props) {
         super(props);
         this.state = {};
@@ -141,3 +135,10 @@ export default class CNav extends Component {
         );
     }
 }
+
+CNav.propTypes = {
+    data: PropsType.array.isRequired
+};
+CNav.defaultProps = {
+    data: []
+};
