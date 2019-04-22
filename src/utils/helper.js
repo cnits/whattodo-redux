@@ -130,7 +130,7 @@ function decrypt(cipherText, seed, reverse, rangeStrs) {
 }
 
 module.exports = {
-    helper: helper,
-    encrypt: encrypt,
-    decrypt: decrypt
+    helper,
+    encrypt,
+    decrypt
 };

@@ -64,10 +64,10 @@ Step by step:
     - module.exports = {
         ...
         module: {
-            loaders: [{
-            test: /\.js?$/,
-            exclude: /node_modules/,
-            loader: 'react-hot!babel'
+            loaders: [{ // Removed from v4
+                test: /\.js?$/,
+                exclude: /node_modules/,
+                loader: 'react-hot!babel'
             }]
         },
         ...
